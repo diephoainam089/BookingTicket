@@ -1,0 +1,194 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Upload Trip</h5>
+                </div>
+                <div class="card-body">
+                    {{!-- start form --}}
+                    {{#if trip}}
+                    <form action="/api/trips/upload/:id" method="post">
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Garage's trip</label>
+                                    <select id="cars">
+                                        <option value="volvo">Phương Trang</option>
+                                        <option value="saab">Thành Bưởi</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Vehicle VehicleID</label>
+                                    <select id="cars">
+                                        <option value="volvo">Limousine 14 chỗ</option>
+                                        <option value="saab">Vip 24 chỗ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Departure FromStationID</label>
+                                    <input type="text" class="form-control" placeholder="Departure" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Destination ToStationID</label>
+                                    <input type="text" class="form-control" placeholder="Destination" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Departure date</label>
+                                    <input type="date" class="form-control" placeholder="Departure date" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Departure time</label>
+                                    <input type="time" class="form-control" placeholder="Departure time" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Instance</label>
+                                    <input type="text" class="form-control" placeholder="Instance" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input type="text" class="form-control" placeholder="Price" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">Save</button>
+                        <a name="" id="" class="btn btn-primary pull-right" href="/api/trips/detail/:id"
+                            role="button">Back
+                            to detail</a>
+                        <div class="clearfix"></div>
+                    </form>
+                    {{else}}
+                    <form action="/api/trips/upload/new" method="post">
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Garage GarageID</label>
+                                    <select id="cars">
+                                        <option value="{{this.garagename}}">Choose one</option>
+                                        <option value="Phương Trang">Phương Trang</option>
+                                        <option value="Thành Bưởi">Thành Bưởi</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Vehicle VehicleID</label>
+                                    <select id="cars">
+                                        <option value="volvo">Limousine 14 chỗ</option>
+                                        <option value="saab">Vip 24 chỗ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Departure FromStationID</label>
+                                    <input type="text" class="form-control" placeholder="Departure" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Destination ToStationID</label>
+                                    <input type="text" class="form-control" placeholder="Destination" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Departure date</label>
+                                    <input type="date" class="form-control" placeholder="Departure date" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Departure time</label>
+                                    <input type="time" class="form-control" placeholder="Departure time" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Instance</label>
+                                    <input type="text" class="form-control" placeholder="Instance" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1">
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input type="text" class="form-control" placeholder="Price" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">Save</button>
+                        <a name="" id="" class="btn btn-primary pull-right" href="/api/trips"
+                            role="button">Back
+                            to list</a>
+                        <div class="clearfix"></div>
+                    </form>
+                    {{/if}}
+                    {{!-- end form --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="../assets/img/bg5.jpg" alt="...">
+                </div>
+                <div class="card-body">
+                    <div class="author">
+                        <a href="#">
+                            <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+                            <h5 class="title">Mike Andrew</h5>
+                        </a>
+                        <p class="description">
+                            michael24
+                        </p>
+                    </div>
+                    <p class="description text-center">
+                        "Lamborghini Mercy <br>
+                        Your chick she so thirsty <br>
+                        I'm in that two seat Lambo"
+                    </p>
+                </div>
+                <hr>
+                <div class="button-container">
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-google-plus-g"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

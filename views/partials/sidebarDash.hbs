@@ -1,0 +1,66 @@
+<div class="sidebar" data-color="orange">
+  <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+  <div class="logo">
+    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+      CT
+    </a>
+    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      Creative Tim
+    </a>
+  </div>
+  <div class="sidebar-wrapper" id="sidebar-wrapper">
+    <ul class="nav">
+      <li class=" {{#if dashboard}} active{{/if}}">
+        <a href="/api/dashboard">
+          <i class="now-ui-icons design_app"></i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li class=" {{#if garage}} active{{/if}}">
+        <a href="/api/garages">
+          <i class="now-ui-icons text_caps-small"></i>
+          <p>Garages management</p>
+        </a>
+      </li>
+      <li class="{{#if trip}} active{{/if}}">
+        <a href="/api/trips">
+          <i class="now-ui-icons education_atom"></i>
+          <p>Trips management</p>
+        </a>
+      </li>
+      <li class="{{#if vehicle}} active{{/if}}">
+        <a href="/api/vehicles">
+          <i class="now-ui-icons location_map-big"></i>
+          <p>Vehicles management</p>
+        </a>
+      </li>
+      <li class="{{#if station}} active{{/if}}">
+        <a href="/api/stations">
+          <i class="now-ui-icons ui-1_bell-53"></i>
+          <p>Station management</p>
+        </a>
+      </li>
+      <li class="{{#if user}} active{{/if}}">
+        <a href="/api/users">
+          <i class="now-ui-icons users_single-02"></i>
+          <p>User management</p>
+        </a>
+      </li>
+      <li class="{{#if order}} active{{/if}}">
+        <a href="/api/orders">
+          <i class="now-ui-icons design_bullet-list-67"></i>
+          <p>order management</p>
+        </a>
+      </li>
+      <li class="active-pro">
+        <a href="./upgrade.html">
+          <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+          <p>Upgrade to PRO</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Navbar -->

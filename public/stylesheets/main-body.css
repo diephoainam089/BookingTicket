@@ -1,0 +1,10 @@
+#body-wrapper-main{
+    margin-top: 40px;
+}
+.main-body{
+    display: block;
+    margin: auto
+}
+.title{
+    padding-top: 30px;
+}

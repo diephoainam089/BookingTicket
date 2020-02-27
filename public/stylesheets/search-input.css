@@ -1,0 +1,70 @@
+.custom_input_middle {
+  height: 50px !important;
+  font-size: 14px !important;
+}
+
+.custom_input {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  height: 50px !important;
+  font-size: 14px !important;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.custom_btn_submit {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  height: 50px !important;
+  font-size: 14px !important;
+}
+.padding_search_input {
+  padding: 0 10px !important;
+}
+.inputWithIcon {
+  position: relative;
+  height: auto !important;
+}
+.inputWithIcon input {
+  padding-left: 50px !important;
+}
+.inputWithIcon .icn {
+  position: absolute;
+  left: 7%;
+  top: 34%;
+  color: #bcbcba;
+}
+
+.inputWithIcon input:focus{
+  color: black
+}
+.inputWithIcon input:focus + .icn {
+  color: #1861c5;
+  transition: ease-in 0.3s;
+}
+
+input[type='date']:before {
+  width: 100%;
+  content: attr(placeholder) !important;
+  color: #bcbcba
+}
+input[type='date']:focus:before,
+input[type='date']:valid:before {
+  display: none
+}
+@media only screen and (max-width: 767px) {
+  .custom_input_middle,
+  .custom_input,
+  .custom_btn_submit {
+    border-radius: 5px !important;
+  }
+
+  .inputWithIcon .icn {
+    left: 3% !important;
+  }
+
+}
+@media only screen and (max-width: 991px) {
+  input[type='date']:before {
+    white-space: nowrap
+  }
+}
